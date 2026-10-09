@@ -1,0 +1,32 @@
+body {
+    background: white;
+    color: black;
+    font-family: Arial;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+a, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+.aula_concluida {
+    color: green;
+    display: block;
+}
+.aula_afazer {
+    color: black;
+    display: block;
+}
+.aula_fechada {
+    color: red;
+
+    display: block;
+}
+.foto_menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
