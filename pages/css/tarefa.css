@@ -1,0 +1,332 @@
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 28px 20px 40px;
+    background:
+        radial-gradient(
+            circle at top left,
+            #A697F1 0,
+            transparent 35%
+        ),
+        #F4FAFF;
+    color: #e2e8f0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* =========================
+   FOTO DE PERFIL
+========================= */
+
+.perfil_link {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+}
+
+.foto_menu {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #A697F1;
+    transition: transform 0.2s;
+}
+
+.foto_menu:hover {
+    transform: scale(1.07);
+}
+
+.perfil_link:focus-visible {
+    outline: 2px solid #A697F1;
+    outline-offset: 4px;
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+.editor-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 28px;
+    padding: 32px;
+    background: #1E003C;
+    border: 1px solid #430185;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   TÍTULO DO EXERCÍCIO
+========================= */
+
+.editor-container h1 {
+    color: #f8fafc;
+    font-size: clamp(25px, 4vw, 34px);
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+    margin-bottom: 18px;
+}
+
+.editor-container h1::after {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 4px;
+    margin-top: 12px;
+    background: #A697F1;
+    border-radius: 10px;
+}
+
+/* =========================
+   ENUNCIADO
+========================= */
+
+.editor-container > div:not(
+    #editor-container
+):not(
+    #loading
+):not(
+    #output
+):not(
+    .button-group
+) {
+    margin-bottom: 24px;
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   MONACO EDITOR
+========================= */
+
+#editor-container {
+    width: 100%;
+    height: 380px;
+    padding-top: 0;
+    margin-bottom: 18px;
+    overflow: hidden;
+    background: #1e1e1e;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+/* =========================
+   ENTRADA DE DADOS
+========================= */
+
+#stdin {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    padding: 14px;
+    margin-bottom: 20px;
+    resize: vertical;
+    background: #0b1120;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#stdin::placeholder {
+    color: #64748b;
+}
+
+#stdin:focus {
+    border-color: #A697F1;
+    box-shadow: 0 0 0 3px rgba(166, 151, 241, 0.13);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.button-group button {
+    flex: 1;
+    min-height: 46px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+#runButton {
+    background: #A697F1;
+    color: #0b1120;
+}
+
+#runButton:hover {
+    background: #A697F1;
+    transform: translateY(-2px);
+}
+
+#verifyButton {
+    background: transparent;
+    color: #A697F1;
+    border-color: #A697F1;
+}
+
+#verifyButton:hover {
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
+}
+
+.button-group button:focus-visible {
+    outline: 3px solid #f8fafc;
+    outline-offset: 3px;
+}
+
+.button-group button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================
+   CARREGAMENTO
+========================= */
+
+.loading-container {
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 4px solid #334155;
+    border-top-color: #A697F1;
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   CONSOLE DE SAÍDA
+========================= */
+
+.console {
+    min-height: 100px;
+    padding: 18px;
+    background: #080d17;
+    color: #d1fae5;
+    border: 1px solid #29364b;
+    border-radius: 10px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow-x: auto;
+}
+
+/* =========================
+   LINK CONTINUAR
+========================= */
+
+body > a[href="aulas.php"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 46px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    background: #A697F1;
+    color: #0b1120;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+body > a[href="aulas.php"]:hover {
+    background: #A697F1;
+    transform: translateY(-2px);
+}
+
+body > a[href="aulas.php"]:focus-visible {
+    outline: 3px solid #f8fafc;
+    outline-offset: 4px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 18px 12px 28px;
+    }
+
+    .perfil_link {
+        margin-bottom: 18px;
+    }
+
+    .editor-container {
+        padding: 20px 14px;
+        border-radius: 13px;
+    }
+
+    .editor-container h1 {
+        font-size: 26px;
+    }
+
+    #editor-container {
+        height: 320px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        width: 100%;
+        flex: auto;
+    }
+
+    .console {
+        padding: 14px;
+        font-size: 13px;
+    }
+}

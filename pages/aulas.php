@@ -56,11 +56,13 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <title>Aulas</title>
 
-    <link rel="stylesheet" href="css/aulas.css">
+    <link rel="stylesheet" href="css/aulas1.css">
 
 </head>
 
 <body>
+    
+    <header>
 
     <a href="usuario.php" class="perfil_link">
 
@@ -71,6 +73,8 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         >
 
     </a>
+
+    </header>
 
 <?php foreach ($aulas as $a): ?>
 

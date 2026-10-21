@@ -12,7 +12,7 @@ $erro = $_GET["erro"] ?? "";
 
     <title>Java School | Login</title>
 
-    <link rel="stylesheet" href="css/conta.css">
+    <link rel="stylesheet" href="css/login.css">
 
 </head>
 

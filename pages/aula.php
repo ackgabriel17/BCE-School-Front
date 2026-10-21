@@ -112,7 +112,7 @@ $urlVideo = obterurlembedyt($aula["video_url"]);
     <header>
 
         <a href="aulas.php">
-            Aulas
+           <--  Aulas
         </a>
 
         <a href="usuario.php" class="perfil_link">

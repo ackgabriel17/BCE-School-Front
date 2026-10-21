@@ -81,7 +81,7 @@ if (!$exercicio) {
 
     <title>Editor</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tarefa.css">
 
     <!-- Monaco Editor via CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js"></script>
