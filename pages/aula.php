@@ -129,7 +129,7 @@ $urlVideo = obterurlembedyt($aula["video_url"]);
 
     <main class="aula-container">
 
-        <h1>
+        <h1 class="titulo">
             <?= htmlspecialchars($aula["titulo"]) ?>
         </h1>
 
@@ -147,11 +147,14 @@ $urlVideo = obterurlembedyt($aula["video_url"]);
 
         <?php endif; ?>
 
+        <button class = "btnfala">escuta</button>
+
         <section class="conteudo">
 
             <?= nl2br(htmlspecialchars($aula["conteudo"])) ?>
 
         </section>
+
 
         <section class="exercicio">
 
@@ -175,5 +178,24 @@ $urlVideo = obterurlembedyt($aula["video_url"]);
     </main>
 
 </body>
+
+<script>
+  import {setVozDaniel} from "./js/vozDaniel.js";
+
+  
+  const falatxt = document.querySelector(".conteudo").innerText;
+  const btnfala = document.querySelector(".btnfala");
+
+  const fala = new SpeechSynthesisUtterance(falatxt);
+  setVozDaniel(fala);
+  fala.lang = 'pt-BR';
+
+  btnfala.addEventListener('click', () => {
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(fala);
+  });
+
+
+</script>
 
 </html>

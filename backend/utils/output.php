@@ -44,7 +44,7 @@ function compararSaida(
     $saida = normalizarOutput($saida);
     $saidaEsperada = normalizarOutput($saidaEsperada);
 
-    if ($tipoVerificacao === "exato") {
+    if ($tipoVerificacao ===  "exata") {
         return $saida === $saidaEsperada;
     }
 
