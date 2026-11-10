@@ -114,6 +114,7 @@ if (!$exercicio) {
             <?= nl2br(htmlspecialchars($exercicio["descricao"])) ?>
         </div>
 
+        <button class="btnfala">fala</button>
         <!-- Div para o Monaco Editor -->
         <div
             id="editor-container"
@@ -166,10 +167,35 @@ if (!$exercicio) {
         Continuar
     </a>
 
-    <script
-        type="module"
-        src="js/editor.js?v=2"
-    ></script>
+    <script type="module" src="js/editor.js?v=2"></script>
+    <script type="module" >
+    
+    import {getEditorValue} from "./js/ui.js";
+    import {prepararCodigoParaFala} from "./js/falacodigo.js";
+    import {setVozDaniel} from "./js/vozDaniel.js";
+    
+    const btnfala = document.querySelector(".btnfala");
+    
+    
+    
+      btnfala.addEventListener('click', () => {
+        const codigo =  getEditorValue();
+        const falatxt = prepararCodigoParaFala(codigo);
+    
+        window.speechSynthesis.cancel();
+        
+        const fala = new SpeechSynthesisUtterance(falatxt);
+        
+        fala.lang = 'pt-BR';
+        fala.rate = 1.2;
+        fala.pitch = 0.9;
+        setVozDaniel(fala);
+        
+        window.speechSynthesis.speak(fala);
+      });
+    
+    
+    </script>
 
 </body>
 
