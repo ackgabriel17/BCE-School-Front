@@ -9,10 +9,13 @@ $erro = $_GET["erro"] ?? "";
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Java School | Login</title>
+    <title>BCE School | Entrar</title>
 
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../CSS/design-system.css">
+    <link rel="stylesheet" href="../CSS/acessibilidade.css">
 
 </head>
 
@@ -22,17 +25,19 @@ $erro = $_GET["erro"] ?? "";
 
         <div class="conta-box">
 
+            <a class="bce-brand auth-brand" href="../index.html">BCE <span>School</span></a>
+
             <h1>Entrar</h1>
 
             <?php if ($erro === "preenchimento"): ?>
 
-                <p class="erro">
+                <p class="erro" role="alert">
                     Preencha todos os campos.
                 </p>
 
             <?php elseif ($erro === "credenciais"): ?>
 
-                <p class="erro">
+                <p class="erro" role="alert">
                     E-mail ou senha incorretos.
                 </p>
 
@@ -82,6 +87,7 @@ $erro = $_GET["erro"] ?? "";
 
     </main>
 
+    <script src="../acessibilidade.js" defer></script>
 </body>
 
 </html>

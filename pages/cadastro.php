@@ -7,8 +7,11 @@ $erro = $_GET["erro"] ?? "";
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Java School | Criar conta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCE School | Criar conta</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../CSS/design-system.css">
+    <link rel="stylesheet" href="../CSS/acessibilidade.css">
 </head>
 <body>
 
@@ -16,29 +19,31 @@ $erro = $_GET["erro"] ?? "";
 
         <div class="conta-box">
 
+            <a class="bce-brand auth-brand" href="../index.html">BCE <span>School</span></a>
+
             <h1>Criar conta</h1>
 
             <?php if ($erro === "preenchimento"): ?>
 
-                <p class="erro">
+                <p class="erro" role="alert">
                     Preencha todos os campos.
                 </p>
 
             <?php elseif ($erro === "email_invalido"): ?>
 
-                <p class="erro">
+                <p class="erro" role="alert">
                     Digite um e-mail válido.
                 </p>
 
             <?php elseif ($erro === "senha_curta"): ?>
 
-                <p class="erro">
+                <p class="erro" role="alert">
                     A senha deve ter pelo menos 8 caracteres.
                 </p>
 
             <?php elseif ($erro === "email_existente"): ?>
 
-                <p class="erro">
+                <p class="erro" role="alert">
                     Este e-mail já está cadastrado.
                 </p>
 
@@ -100,6 +105,7 @@ $erro = $_GET["erro"] ?? "";
 
     </main>
 
+    <script src="../acessibilidade.js" defer></script>
 </body>
 
 </html>

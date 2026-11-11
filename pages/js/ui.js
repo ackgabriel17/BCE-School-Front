@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 theme: 'vs-dark',
                 automaticLayout: true,
                 tabSize: 4,
-                minimap: { enabled: false }
+                minimap: { enabled: false },
+                accessibilitySupport: 'on',
+                ariaLabel: 'Editor de código Java'
             });
         });
     }

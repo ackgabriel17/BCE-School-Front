@@ -78,20 +78,25 @@ if (!$exercicio) {
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Editor</title>
 
     <link rel="stylesheet" href="css/tarefa.css">
+    <link rel="stylesheet" href="../CSS/design-system.css">
+    <link rel="stylesheet" href="../CSS/acessibilidade.css">
 
     <!-- Monaco Editor via CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js"></script>
 
 </head>
 
-<body style="background-color: white; color: black!important;">
+<body>
 
 
-    <a href="usuario.php" class="perfil_link">
+    <header class="bce-header">
+        <a class="bce-brand" href="../index.html">BCE <span>School</span></a>
+        <a href="usuario.php" class="perfil_link" aria-label="Abrir perfil do usuário">
 
         <img
             src="<?= htmlspecialchars($caminhoFoto) ?>"
@@ -100,9 +105,9 @@ if (!$exercicio) {
         >
 
     </a>
+    </header>
 
-    <div
-        class="editor-container"
+    <main id="conteudo-principal" tabindex="-1" class="editor-container"
         data-exercicio-id="<?= (int) $exercicio["id"] ?>"
     >
 
@@ -116,8 +121,11 @@ if (!$exercicio) {
 
         <button class="btnfala">fala</button>
         <!-- Div para o Monaco Editor -->
+        <label for="editor-container">Editor de código Java</label>
         <div
             id="editor-container"
+            role="region"
+            aria-label="Editor de código Java. Use os recursos de acessibilidade do editor para navegar pelo código."
             style="background-color: #1e1e1e;height: 350px; padding-top: 20px; border: 1px solid #ccc; margin-bottom: 15px;"
         ></div>
 
@@ -127,9 +135,11 @@ if (!$exercicio) {
             style="display:none;"
         ><?= htmlspecialchars($exercicio["codigo_inicial"]) ?></textarea>
 
+        <label for="stdin">Entrada do programa (stdin)</label>
         <textarea
             id="stdin"
-            placeholder="Entrada (stdin)"
+            aria-label="Entrada padrão do programa"
+            placeholder="Digite aqui os dados de entrada"
             style="height:120px;"
         ></textarea>
 
@@ -155,16 +165,21 @@ if (!$exercicio) {
 
         </div>
 
+        <h2 id="output-title">Resultado da execução</h2>
         <div
             class="console"
             style="color: white;"
             id="output"
+            role="region"
+            aria-labelledby="output-title"
+            aria-live="polite"
+            tabindex="0"
         ></div>
 
-    </div>
+    </main>
 
-    <a href="aulas.php">
-        Continuar
+    <a class="editor-continue" href="aulas.php">
+        Voltar às aulas
     </a>
 
     <script type="module" src="js/editor.js?v=2"></script>
@@ -197,6 +212,7 @@ if (!$exercicio) {
     
     </script>
 
+    <script src="../acessibilidade.js" defer></script>
 </body>
 
 </html>

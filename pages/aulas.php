@@ -53,18 +53,23 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Aulas</title>
 
     <link rel="stylesheet" href="css/aulas1.css">
+    <link rel="stylesheet" href="../CSS/design-system.css">
+    <link rel="stylesheet" href="../CSS/acessibilidade.css">
 
 </head>
 
 <body>
     
-    <header>
+    <header class="bce-header">
 
-    <a href="usuario.php" class="perfil_link">
+    <a class="bce-brand" href="../index.html">BCE <span>School</span></a>
+
+    <a href="usuario.php" class="perfil_link" aria-label="Abrir perfil do usuário">
 
         <img
             src="<?= htmlspecialchars($caminhoFoto) ?>"
@@ -75,6 +80,14 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </a>
 
     </header>
+
+<main id="conteudo-principal" class="aulas-lista" tabindex="-1" aria-label="Lista de aulas">
+
+    <div class="page-intro">
+        <p class="page-eyebrow">SUA JORNADA</p>
+        <h1>Minhas aulas</h1>
+        <p>Continue aprendendo no seu ritmo. Acompanhe seu progresso abaixo.</p>
+    </div>
 
 <?php foreach ($aulas as $a): ?>
 
@@ -130,6 +143,9 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <?php endforeach; ?>
 
+</main>
+
+    <script src="../acessibilidade.js" defer></script>
 </body>
 
 </html>

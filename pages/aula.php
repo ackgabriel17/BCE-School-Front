@@ -98,24 +98,27 @@ $urlVideo = obterurlembedyt($aula["video_url"]);
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         <?= htmlspecialchars($aula["titulo"]) ?>
     </title>
 
     <link rel="stylesheet" href="css/aula.css">
+    <link rel="stylesheet" href="../CSS/design-system.css">
+    <link rel="stylesheet" href="../CSS/acessibilidade.css">
 
 </head>
 
 <body>
 
-    <header>
+    <header class="bce-header">
 
-        <a href="aulas.php">
-           <--  Aulas
-        </a>
+        <a class="bce-brand" href="../index.html">BCE <span>School</span></a>
 
-        <a href="usuario.php" class="perfil_link">
+        <a class="header-back" href="aulas.php">← Voltar às aulas</a>
+
+        <a href="usuario.php" class="perfil_link" aria-label="Abrir perfil do usuário">
 
             <img
                 src="<?= htmlspecialchars($caminhoFoto) ?>"
@@ -147,9 +150,10 @@ $urlVideo = obterurlembedyt($aula["video_url"]);
 
         <?php endif; ?>
 
-        <button class = "btnfala">escuta</button>
+        <button class="btnfala" type="button" aria-controls="texto-aula">Ouvir conteúdo</button>
+        <p id="status-leitura" role="status" aria-live="polite"></p>
 
-        <section class="conteudo">
+        <section class="conteudo" id="texto-aula">
 
             <?= nl2br(htmlspecialchars($aula["conteudo"])) ?>
 
@@ -177,25 +181,43 @@ $urlVideo = obterurlembedyt($aula["video_url"]);
 
     </main>
 
-</body>
+    <script src="../acessibilidade.js" defer></script>
+    <script>
+  const textoAula = document.querySelector("#texto-aula");
+  const botaoLeitura = document.querySelector(".btnfala");
+  const statusLeitura = document.querySelector("#status-leitura");
+  let lendo = false;
 
-<script>
-  import {setVozDaniel} from "./js/vozDaniel.js";
-
-  
-  const falatxt = document.querySelector(".conteudo").innerText;
-  const btnfala = document.querySelector(".btnfala");
-
-  const fala = new SpeechSynthesisUtterance(falatxt);
-  setVozDaniel(fala);
-  fala.lang = 'pt-BR';
-
-  btnfala.addEventListener('click', () => {
+  botaoLeitura.addEventListener("click", () => {
+    if (!("speechSynthesis" in window)) {
+      statusLeitura.textContent = "A leitura em voz alta não está disponível neste navegador.";
+      return;
+    }
+    if (lendo) {
+      window.speechSynthesis.cancel();
+      lendo = false;
+      botaoLeitura.textContent = "Ouvir conteúdo";
+      statusLeitura.textContent = "Leitura interrompida.";
+      return;
+    }
+    const fala = new SpeechSynthesisUtterance(textoAula.innerText);
+    fala.lang = "pt-BR";
+    fala.onend = () => {
+      lendo = false;
+      botaoLeitura.textContent = "Ouvir conteúdo";
+      statusLeitura.textContent = "Leitura concluída.";
+    };
+    fala.onerror = () => {
+      lendo = false;
+      botaoLeitura.textContent = "Ouvir conteúdo";
+      statusLeitura.textContent = "Não foi possível concluir a leitura.";
+    };
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(fala);
+    lendo = true;
+    botaoLeitura.textContent = "Parar leitura";
+    statusLeitura.textContent = "Lendo o conteúdo da aula.";
   });
-
-
-</script>
-
+    </script>
+</body>
 </html>

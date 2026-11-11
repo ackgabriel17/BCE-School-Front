@@ -38,20 +38,30 @@ if ($foto === "default.jpg") {
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Java School | Usuário</title>
+    <title>BCE School | Meu perfil</title>
 
     <link rel="stylesheet" href="css/conta.css">
+    <link rel="stylesheet" href="../CSS/design-system.css">
+    <link rel="stylesheet" href="../CSS/acessibilidade.css">
 
 </head>
 
 <body>
 
+    <header class="bce-header">
+        <a class="bce-brand" href="../index.html">BCE <span>School</span></a>
+        <a class="header-back" href="aulas.php">Voltar às aulas</a>
+    </header>
+
     <main class="conta-container">
 
         <div class="conta-box">
 
-            <h1>Usuário</h1>
+            <h1>Meu perfil</h1>
+
+            <p class="profile-email"><?= htmlspecialchars($usuario["email"]) ?></p>
 
             <p>
                 Nome:
@@ -70,8 +80,10 @@ if ($foto === "default.jpg") {
                 enctype="multipart/form-data"
             >
 
+                <label for="foto">Escolher foto de perfil</label>
                 <input
                     type="file"
+                    id="foto"
                     name="foto"
                     accept=".jpg,.jpeg,.png,.webp"
                 >
@@ -88,7 +100,7 @@ if ($foto === "default.jpg") {
 
             <a
                 class="botao"
-                href="javascript:history.back()"
+                href="aulas.php"
             >
                 &lt;-- Voltar
             </a>
@@ -104,6 +116,7 @@ if ($foto === "default.jpg") {
 
     </main>
 
+    <script src="../acessibilidade.js" defer></script>
 </body>
 
 </html>
