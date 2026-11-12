@@ -1,7 +1,5 @@
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+/* Configurações gerais */
 
 * {
     margin: 0;
@@ -23,9 +21,7 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* =========================
-   FOTO DE PERFIL
-========================= */
+/* Foto de perfil */
 
 header {
     width: 100%;
@@ -67,9 +63,7 @@ header {
     outline-offset: 4px;
 }
 
-/* =========================
-   CARTÕES DAS AULAS
-========================= */
+/* Cartões de aula */
 
 body > a[class^="aula_"],
 body > div.aula_fechada {
@@ -113,9 +107,7 @@ body > div.aula_fechada p {
     text-transform: capitalize;
 }
 
-/* =========================
-   AULA CONCLUÍDA
-========================= */
+/* Aula concluída */
 
 .aula_concluida {
     border-left: 4px solid #34d399 !important;
@@ -126,15 +118,13 @@ body > div.aula_fechada p {
 }
 
 .aula_concluida:hover {
-    background: #112b2b !important;
+    background: #fff !important;
     border-color: #23665a !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(16, 185, 129, 0.08);
 }
 
-/* =========================
-   AULA ATUAL
-========================= */
+/* Aula atual */
 
 .aula_afazer {
     background: #15263a !important;
@@ -157,9 +147,7 @@ body > div.aula_fechada p {
     transform: translateY(-2px);
 }
 
-/* =========================
-   AULA BLOQUEADA
-========================= */
+/* Aula bloqueada */
 
 .aula_fechada {
     background: #111a2b !important;
@@ -175,9 +163,7 @@ body > div.aula_fechada p {
     color: #64748b;
 }
 
-/* =========================
-   ACESSIBILIDADE
-========================= */
+/* Acessibilidade */
 
 body > a[class^="aula_"]:focus-visible {
     outline: 3px solid #38bdf8;
@@ -195,9 +181,7 @@ body > a[class^="aula_"]:focus-visible {
     }
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/* Responsividade */
 
 @media (max-width: 600px) {
     body {

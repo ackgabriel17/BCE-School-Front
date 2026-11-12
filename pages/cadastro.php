@@ -9,7 +9,7 @@ $erro = $_GET["erro"] ?? "";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BCE School | Criar conta</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../CSS/login.css">
     <link rel="stylesheet" href="../CSS/design-system.css">
     <link rel="stylesheet" href="../CSS/acessibilidade.css">
 </head>

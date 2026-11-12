@@ -57,7 +57,6 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <title>Aulas</title>
 
-    <link rel="stylesheet" href="css/aulas1.css">
     <link rel="stylesheet" href="../CSS/design-system.css">
     <link rel="stylesheet" href="../CSS/acessibilidade.css">
 

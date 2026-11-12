@@ -1,28 +1,147 @@
 /* Recursos globais de acessibilidade da BCE School */
-html { scroll-behavior: smooth; }
-html.a11y-text-plus { font-size: 112.5%; }
-html.a11y-text-max { font-size: 125%; }
-html.a11y-spacing body,
-html.a11y-spacing body p,
-html.a11y-spacing body li,
-html.a11y-spacing body label { line-height: 1.9 !important; letter-spacing: .035em !important; word-spacing: .12em !important; }
-html.a11y-contrast body { filter: contrast(1.35); }
-html.a11y-contrast :focus-visible { outline: 3px solid #ffdf00 !important; outline-offset: 4px !important; }
-html.a11y-reduced-motion *,
-html.a11y-reduced-motion *::before,
-html.a11y-reduced-motion *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
-:where(a, button, input, select, textarea, [tabindex]):focus-visible { outline: 3px solid #f4c542; outline-offset: 3px; }
-.a11y-skip-link { position: fixed; z-index: 10001; top: 8px; left: 8px; padding: 12px 16px; background: #fff; color: #111; border: 2px solid #111; border-radius: 8px; transform: translateY(-150%); }
-.a11y-skip-link:focus { transform: translateY(0); }
-.a11y-widget { position: fixed; z-index: 10000; right: 16px; bottom: 16px; font: 16px/1.4 Arial, sans-serif; color: #111; }
-.a11y-toggle { border: 2px solid #fff; border-radius: 999px; padding: 12px 16px; min-height: 48px; background: #25205b; color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 3px 14px #0005; }
-.a11y-panel { width: min( min(340px, calc(100vw - 32px)), 340px); margin-top: 8px; padding: 16px; border: 2px solid #25205b; border-radius: 14px; background: #fff; color: #171717; box-shadow: 0 8px 30px #0004; }
-.a11y-panel[hidden] { display: none; }
-.a11y-panel h2 { margin: 0 0 12px; font-size: 1.15rem; }
-.a11y-panel p { margin: 0 0 10px; font-size: .9rem; }
-.a11y-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.a11y-controls button { min-height: 44px; padding: 9px; border: 1px solid #514b78; border-radius: 8px; background: #f4f2ff; color: #17123d; font: inherit; font-size: .9rem; cursor: pointer; }
-.a11y-controls button[aria-pressed="true"] { background: #25205b; color: #fff; }
-.a11y-controls .a11y-reset { grid-column: 1 / -1; background: #eee; color: #111; }
-.a11y-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-@media (max-width: 480px) { .a11y-widget { right: 10px; bottom: 10px; } }
+html { 
+    scroll-behavior: smooth; 
+}
+
+html.a11y-text-plus { 
+    font-size: 112.5%; 
+}
+
+html.a11y-text-max { 
+    font-size: 125%; 
+}
+
+html.a11y-spacing body, html.a11y-spacing body p, html.a11y-spacing body li, html.a11y-spacing body label { 
+    line-height: 1.9 !important; 
+    letter-spacing: .035em !important; 
+    word-spacing: .12em !important; 
+}
+
+html.a11y-contrast body { 
+    filter: contrast(1.35); 
+}
+
+html.a11y-contrast :focus-visible { 
+    outline: 3px solid #ffdf00 !important; 
+    outline-offset: 4px !important; 
+}
+
+html.a11y-reduced-motion *, html.a11y-reduced-motion *::before, html.a11y-reduced-motion *::after { 
+    animation-duration: .01ms !important; 
+    animation-iteration-count: 1 !important; 
+    transition-duration: .01ms !important; 
+    scroll-behavior: auto !important; 
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible { 
+    outline: 3px solid #f4c542; 
+    outline-offset: 3px; 
+}
+
+.a11y-skip-link { 
+    position: fixed; 
+    z-index: 10001; 
+    top: 8px; 
+    left: 8px; 
+    padding: 12px 16px; 
+    background: #fff; 
+    color: #111; 
+    border: 2px solid #111; 
+    border-radius: 8px; 
+    transform: translateY(-150%); 
+}
+
+.a11y-skip-link:focus { 
+    transform: translateY(0); 
+}
+
+.a11y-widget { 
+    position: fixed; 
+    z-index: 10000; 
+    right: 16px; 
+    bottom: 16px; 
+    font: 16px/1.4 Arial, sans-serif; 
+    color: #111; 
+}
+
+.a11y-toggle { 
+    border: 2px solid #fff; 
+    border-radius: 999px; 
+    padding: 12px 16px; 
+    min-height: 48px; 
+    background: #25205b; 
+    color: #fff; 
+    font-weight: 700; 
+    cursor: pointer; 
+    box-shadow: 0 3px 14px #0005; 
+}
+
+.a11y-panel { 
+    width: min( min(340px, calc(100vw - 32px)), 340px); 
+    margin-top: 8px; 
+    padding: 16px; 
+    border: 2px solid #25205b; 
+    border-radius: 14px; 
+    background: #fff; 
+    color: #171717; 
+    box-shadow: 0 8px 30px #0004; 
+}
+
+.a11y-panel[hidden] {
+     display: none; 
+}
+
+.a11y-panel h2 { 
+    margin: 0 0 12px; 
+    font-size: 1.15rem; 
+}
+
+.a11y-panel p { 
+    margin: 0 0 10px; 
+    font-size: .9rem; 
+}
+
+.a11y-controls { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px; 
+}
+
+.a11y-controls button { 
+    min-height: 44px; 
+    padding: 9px; 
+    border: 1px solid #514b78; 
+    border-radius: 8px; 
+    background: #f4f2ff; 
+    color: #17123d; 
+    font: inherit; 
+    font-size: .9rem; 
+    cursor: pointer; 
+}
+
+.a11y-controls button[aria-pressed="true"] { 
+    background: #25205b; 
+    color: #fff; 
+}
+
+.a11y-controls .a11y-reset { 
+    grid-column: 1 / -1; 
+    background: #eee; 
+    color: #111; 
+}
+
+.a11y-status { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0,0,0,0); 
+    white-space: nowrap; 
+    border: 0; 
+}
+
+@media (max-width: 480px) { 
+    .a11y-widget { right: 10px; bottom: 10px; } 
+}

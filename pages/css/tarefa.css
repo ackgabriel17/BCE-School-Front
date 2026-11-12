@@ -1,7 +1,5 @@
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+/* Configurações globais */
 
 * {
     margin: 0;
@@ -24,9 +22,7 @@ body {
     line-height: 1.6;
 }
 
-/* =========================
-   FOTO DE PERFIL
-========================= */
+/* Foto de perfil */
 
 .perfil_link {
     display: flex;
@@ -53,9 +49,7 @@ body {
     outline-offset: 4px;
 }
 
-/* =========================
-   CONTAINER PRINCIPAL
-========================= */
+/* Container principal */
 
 .editor-container {
     width: 100%;
@@ -68,9 +62,7 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
-/* =========================
-   TÍTULO DO EXERCÍCIO
-========================= */
+/* Título do exercício */
 
 .editor-container h1 {
     color: #f8fafc;
@@ -90,9 +82,7 @@ body {
     border-radius: 10px;
 }
 
-/* =========================
-   ENUNCIADO
-========================= */
+/* Enunciado */
 
 .editor-container > div:not(
     #editor-container
@@ -110,9 +100,7 @@ body {
     overflow-wrap: anywhere;
 }
 
-/* =========================
-   MONACO EDITOR
-========================= */
+/* Monaco editor */
 
 #editor-container {
     width: 100%;
@@ -125,9 +113,7 @@ body {
     border-radius: 10px;
 }
 
-/* =========================
-   ENTRADA DE DADOS
-========================= */
+/* Entrada */
 
 #stdin {
     display: block;
@@ -156,9 +142,7 @@ body {
     box-shadow: 0 0 0 3px rgba(166, 151, 241, 0.13);
 }
 
-/* =========================
-   BOTÕES
-========================= */
+/* Botões */
 
 .button-group {
     display: flex;
@@ -215,9 +199,7 @@ body {
     transform: none;
 }
 
-/* =========================
-   CARREGAMENTO
-========================= */
+/* Carregamento */
 
 .loading-container {
     justify-content: center;
@@ -240,9 +222,7 @@ body {
     }
 }
 
-/* =========================
-   CONSOLE DE SAÍDA
-========================= */
+/* Console saída */
 
 .console {
     min-height: 100px;
@@ -259,9 +239,7 @@ body {
     overflow-x: auto;
 }
 
-/* =========================
-   LINK CONTINUAR
-========================= */
+/* Link continuar */
 
 body > a[href="aulas.php"] {
     display: flex;
@@ -290,9 +268,7 @@ body > a[href="aulas.php"]:focus-visible {
     outline-offset: 4px;
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/* Responsividade */
 
 @media (max-width: 600px) {
     body {
