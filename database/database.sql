@@ -39,7 +39,7 @@ CREATE TABLE usuarios(
 	email VARCHAR(255) NOT NULL UNIQUE,
 	senha VARCHAR(255) NOT NULL,
 	foto varchar(255) not null default 'default.jpg',
-	aula_atual INT NOT NULL DEFAULT 1 
+	aula_atual INT NOT NULL DEFAULT 1
 );
 
 INSERT INTO usuarios(nome,email,senha, aula_atual)
@@ -95,7 +95,7 @@ VALUES
     'Escreva um programa em Java que mostre a mensagem Hello World na tela.',
     'public class Main {
     public static void main(String[] args) {
-        
+
     }
 }'
 ),
@@ -134,7 +134,7 @@ VALUES
    1,
    '',
    'Hello World',
-   'exato'
+   'exata'
 ),
 (
    2,
