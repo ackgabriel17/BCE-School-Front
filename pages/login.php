@@ -10,10 +10,10 @@ $erro = $_GET["erro"] ?? "";
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/Group 4 (3) (1).png" type="image/x-icon">
 
     <title>BCE School | Entrar</title>
 
-    <link rel="stylesheet" href="../CSS/login.css">
     <link rel="stylesheet" href="../CSS/design-system.css">
     <link rel="stylesheet" href="../CSS/acessibilidade.css">
 
@@ -25,7 +25,7 @@ $erro = $_GET["erro"] ?? "";
 
         <div class="conta-box">
 
-            <a class="bce-brand auth-brand" href="../index.html">BCE <span>School</span></a>
+            <a class="bce-brand auth-brand" href="../index.html"><img class="logo" src="../imgs/Frame 3.png" alt="BCE School"></a>
 
             <h1>Entrar</h1>
 

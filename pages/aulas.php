@@ -54,6 +54,7 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/Group 4 (3) (1).png" type="image/x-icon">
 
     <title>Aulas</title>
 
@@ -66,7 +67,7 @@ $aulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     <header class="bce-header">
 
-    <a class="bce-brand" href="../index.html">BCE <span>School</span></a>
+    <a class="bce-brand" href="../index.html"><img class="logo" src="../imgs/Frame 3.png" alt="BCE School"></a>
 
     <a href="usuario.php" class="perfil_link" aria-label="Abrir perfil do usuário">
 
