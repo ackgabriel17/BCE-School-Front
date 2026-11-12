@@ -208,7 +208,7 @@ VALUES
 
 (
     'Introdução ao Java',
-    'https://www.youtube.com/watch?v=QO5ItC3KqJg&list=PLJ0AcghBBWSi6nK2CUkw9ngvwWB1gE8mL&index=5',
+    'https://youtu.be/JkxnHrc1Gxg?si=2ohAozQbzlZfyeN4',
     'Nesta aula, vamos conhecer o funcionamento do nosso site, aprender como navegar pelas aulas e entender o que será estudado durante o curso de Java. Também veremos conceitos iniciais de programação, sintaxe, estrutura de um programa Java, a classe Main e como executar um programa simples. Ao final, você aprenderá a criar seu primeiro Hello World.',
     1,
     1
@@ -216,7 +216,7 @@ VALUES
 
 (
     'Entrada, saída e variáveis',
-    'https://www.youtube.com/watch?v=BLMu7ebMC1A&list=PLJ0AcghBBWSi6nK2CUkw9ngvwWB1gE8mL&index=6',
+    'https://youtu.be/JkxnHrc1Gxg?si=2ohAozQbzlZfyeN4',
     'Nesta aula, vamos aprender como trabalhar com entradas e saídas de dados, variáveis, tipos de dados e operadores básicos da linguagem Java.',
     2,
     2
@@ -224,7 +224,7 @@ VALUES
 
 (
     'Maior entre dois números',
-    'https://www.youtube.com/watch?v=BLMu7ebMC1A&list=PLJ0AcghBBWSi6nK2CUkw9ngvwWB1gE8mL&index=6',
+    'https://youtu.be/JkxnHrc1Gxg?si=2ohAozQbzlZfyeN4',
     'Nesta atividade, vamos aplicar variáveis, entrada de dados e operadores de comparação para descobrir qual é o maior entre dois números.',
     3,
     3
