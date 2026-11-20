@@ -43,7 +43,7 @@ CREATE TABLE usuarios(
 );
 
 INSERT INTO usuarios(nome,email,senha, aula_atual)
-VALUES('niger','a@gmail.com','$2y$10$08r2z7HSzUZcHGeH1TGDieW.dKc/LTmu0pHeQ7shjOWcmKglPvie.', 21);
+VALUES('jhon','jhon@gmail.com','$2y$10$08r2z7HSzUZcHGeH1TGDieW.dKc/LTmu0pHeQ7shjOWcmKglPvie.', 21);
 
 /*INSERT INTO exercicios
 (titulo, descricao, codigo_inicial)
@@ -128,7 +128,7 @@ public class Main {
 }'
 ),
 (
-    
+
     'Classificando números',
     'Leia três números inteiros. Para cada número, mostre um código de classificação: 1 se for positivo, -1 se for negativo e 0 se for igual a zero. Mostre os três códigos na mesma ordem dos números recebidos. Não escreva mensagens adicionais com números.',
     'import java.util.Scanner;
@@ -144,7 +144,7 @@ public class Main {
 ),
 
 (
-    
+
     'Números pares e ímpares',
     'Leia três números inteiros. Para cada número, mostre 1 se ele for par ou 0 se ele for ímpar. Considere que zero também é par. Mostre os três resultados na mesma ordem dos números recebidos.',
     'import java.util.Scanner;
@@ -160,7 +160,7 @@ public class Main {
 ),
 
 (
-    
+
     'Maior entre três números',
     'Leia três números inteiros e mostre o maior deles. Os números podem ser positivos, negativos ou iguais. Mostre somente o maior valor.',
     'import java.util.Scanner;
@@ -176,7 +176,7 @@ public class Main {
 ),
 
 (
-    
+
     'Menor entre três números',
     'Leia três números inteiros e mostre o menor deles. Os números podem ser positivos, negativos ou iguais. Mostre somente o menor valor.',
     'import java.util.Scanner;
@@ -192,7 +192,7 @@ public class Main {
 ),
 
 (
-    
+
     'Média de dois números',
     'Leia dois números decimais e calcule a média aritmética entre eles. A média é obtida somando os dois valores e dividindo o resultado por 2. Mostre somente a média. Utilize double para armazenar os valores.',
     'import java.util.Scanner;
@@ -223,7 +223,7 @@ public class Main {
 ),
 
 (
-    
+
     'Contagem crescente',
     'Leia um número inteiro positivo N e mostre todos os números de 1 até N, em ordem crescente. Mostre um número por linha. Por exemplo, se N for 4, a saída será 1, 2, 3 e 4.',
     'import java.util.Scanner;
@@ -239,7 +239,7 @@ public class Main {
 ),
 
 (
-    
+
     'Soma de 1 até N',
     'Leia um número inteiro positivo N e calcule a soma de todos os números inteiros de 1 até N. Por exemplo, para N igual a 5, o resultado será 15. Mostre somente o resultado.',
     'import java.util.Scanner;
@@ -255,7 +255,7 @@ public class Main {
 ),
 
 (
-    
+
     'Múltiplos de um número',
     'Leia um número inteiro e mostre seus cinco primeiros múltiplos positivos, começando pela multiplicação por 1. Mostre um resultado por linha. Por exemplo, para o número 3, mostre 3, 6, 9, 12 e 15.',
     'import java.util.Scanner;
@@ -271,7 +271,7 @@ public class Main {
 ),
 
 (
-    
+
     'Calculando o fatorial',
     'Leia um número inteiro entre 0 e 10 e calcule seu fatorial. O fatorial é o produto dos números inteiros positivos de 1 até o número informado. Por exemplo, 5! é igual a 120. O fatorial de zero é 1. Mostre somente o resultado.',
     'import java.util.Scanner;
@@ -287,7 +287,7 @@ public class Main {
 ),
 
 (
-    
+
     'Somando até encontrar zero',
     'Leia números inteiros e some todos eles. A leitura deve continuar até que o número zero seja recebido. O zero encerra a leitura e não entra na soma. Os números podem ser positivos ou negativos. Mostre somente a soma final.',
     'import java.util.Scanner;
@@ -303,7 +303,7 @@ public class Main {
 ),
 
 (
-    
+
     'Soma dos elementos de um vetor',
     'Leia cinco números inteiros e armazene-os em um vetor de cinco posições. Depois, percorra o vetor e calcule a soma de seus elementos. Mostre somente o resultado.',
     'import java.util.Scanner;
@@ -321,7 +321,7 @@ public class Main {
 ),
 
 (
-    
+
     'Maior elemento de um vetor',
     'Leia cinco números inteiros e armazene-os em um vetor. Depois, percorra o vetor e encontre o maior valor armazenado. Os números podem ser negativos ou iguais. Mostre somente o maior valor.',
     'import java.util.Scanner;
@@ -339,7 +339,7 @@ public class Main {
 ),
 
 (
-    
+
     'Contando números positivos',
     'Leia cinco números inteiros e armazene-os em um vetor. Depois, conte quantos elementos são maiores que zero. O número zero não deve ser considerado positivo. Mostre somente a quantidade encontrada.',
     'import java.util.Scanner;
@@ -357,7 +357,7 @@ public class Main {
 ),
 
 (
-    
+
     'Contando números pares no vetor',
     'Leia cinco números inteiros e armazene-os em um vetor. Depois, conte quantos elementos são pares. Lembre-se de que um número é par quando o resto da divisão por 2 é igual a zero. O número zero também é par. Mostre somente a quantidade encontrada.',
     'import java.util.Scanner;
@@ -375,7 +375,7 @@ public class Main {
 ),
 
 (
-    
+
     'Média dos elementos de um vetor',
     'Leia cinco números inteiros e armazene-os em um vetor. Depois, calcule a média aritmética dos cinco valores. Utilize double para o resultado, evitando perder a parte decimal da divisão. Mostre somente a média.',
     'import java.util.Scanner;
@@ -393,7 +393,7 @@ public class Main {
 ),
 
 (
-    
+
     'Contando ocorrências no vetor',
     'Leia cinco números inteiros e armazene-os em um vetor. Depois, leia mais um número inteiro, que será o valor procurado. Percorra o vetor e conte quantas vezes esse valor aparece. Mostre somente a quantidade de ocorrências.',
     'import java.util.Scanner;
