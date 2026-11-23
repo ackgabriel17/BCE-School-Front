@@ -932,3 +932,4 @@ No exercício, leia cinco números, depois leia um valor procurado e conte quant
     20,
     20
 );
+update aulas set video_url='https://youtu.be/fVHKhtV5-vE'; 
